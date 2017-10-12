@@ -1,0 +1,13 @@
+<!doctype html>
+<title> COLLEGES </title>
+
+{% if colleges %}
+	<h1>Top Colleges</h1>
+	<ul>
+		{% for college in colleges %}
+			<li><a href="/colleges/{{loop.index-1}}">{{college}}</a></li>
+		{% endfor %}
+	</ul>
+{% else %}
+	<p>Something went wrong</p>
+{% endif %}
